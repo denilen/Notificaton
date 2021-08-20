@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <IsPublishable>true</IsPublishable>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>EmailGate.Worker</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <RuntimeIdentifiers>win10-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.2.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="MassTransit" Version="7.2.1" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.2.1" />
+    <PackageReference Include="MassTransit.Autofac" Version="7.2.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="7.2.1" />
+    <PackageReference Include="Commons.Http" Version="1.14.0-unstable.5.16" />
+    <PackageReference Include="Commons.Logging.Autofac" Version="1.1.0" />
+    <PackageReference Include="Commons.Logging.Serilog" Version="1.1.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
+    <PackageReference Include="NullGuard.Fody" Version="3.0.0" />
+    <PackageReference Include="Serilog.Enrichers.MassTransit" Version="1.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Commons\Infrastructure\Helpers.AspNetCore\Helpers.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\Extensions\Custom.MassTransit.OpenTracing\Custom.MassTransit.OpenTracing.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Infrastructure.EmailGate.DataTypes\Infrastructure.EmailGate.DataTypes.csproj" />
+    <ProjectReference Include="..\EmailGate.Application\EmailGate.Application.csproj" />
+  </ItemGroup>
+
+</Project>

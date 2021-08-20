@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Infrastructure.SmsGate.DataTypes\Infrastructure.SmsGate.DataTypes.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Refit" Version="6.0.38" />
+    </ItemGroup>
+
+</Project>

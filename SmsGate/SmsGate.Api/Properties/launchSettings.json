@@ -1,0 +1,15 @@
+﻿{
+  "profiles": {
+    "SmsGate.Api": {
+      "commandName": "Project",
+      "commandLineArgs": "--console",
+      "launchBrowser": false,
+      "launchUrl": "",
+      "applicationUrl": "http://localhost:29000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:29000"
+      }
+    }
+  }
+}

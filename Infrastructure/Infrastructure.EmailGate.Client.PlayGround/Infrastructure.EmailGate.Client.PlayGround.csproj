@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Refit" Version="6.0.38" />
+      <PackageReference Include="Refit.HttpClientFactory" Version="6.0.38" />
+      <PackageReference Include="Refit.Newtonsoft.Json" Version="6.0.38" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Infrastructure.EmailGate.Client\Infrastructure.EmailGate.Client.csproj" />
+      <ProjectReference Include="..\Infrastructure.EmailGate.DataTypes\Infrastructure.EmailGate.DataTypes.csproj" />
+    </ItemGroup>
+
+</Project>
